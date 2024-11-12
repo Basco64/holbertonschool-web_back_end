@@ -19,7 +19,7 @@ module.exports = {
     "no-shadow": "off",
     "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
     "no-underscore-dangle": "off",
-    "quotes": "off",
+    "max-classes-per-file": "off",
   },
   overrides: [
     {

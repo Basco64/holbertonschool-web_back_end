@@ -1,4 +1,4 @@
-import Building from "./5-building";
+import Building from './5-building';
 
 export default class SkyHighBuilding extends Building {
   constructor(sqft, floors) {
@@ -11,8 +11,8 @@ export default class SkyHighBuilding extends Building {
   }
 
   set floors(value) {
-    if (typeof value !== "number") {
-      throw new TypeError("Floors must be a number");
+    if (typeof value !== 'number') {
+      throw new TypeError('Floors must be a number');
     }
     this._floors = value;
   }
