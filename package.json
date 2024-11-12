@@ -4,8 +4,8 @@
     "check-lint": "lint [0-9]*.js",
     "dev": "npx babel-node",
     "test": "jest",
-    "full-test": "./node_modules/.bin/eslint ./**/[0-9]*.js && jest",
-    "git": "npm run dos2unix && git add . && git commit -m 'Push' && git push",
+    "full-test": "npm run dos2unix && ./node_modules/.bin/eslint ./**/[0-9]*.js && jest",
+    "git": "git add . && git commit -m 'Push' && git push",
     "dos2unix": "find . -path './**/[0-9]*.js' -not -path './node_modules/*' -exec dos2unix {} \\;"
   },
   "devDependencies": {
