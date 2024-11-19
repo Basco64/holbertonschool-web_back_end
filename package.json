@@ -5,7 +5,7 @@
     "dev": "npx babel-node",
     "test": "jest",
     "full-test": "npm run dos2unix && ./node_modules/.bin/eslint ./**/[0-9]*.js && jest",
-    "git": "git add . && git commit -m 'Push' && git push",
+    "git": "git add . && git commit -m 'task 1,2,3,4' && git push",
     "dos2unix": "find . -path './**/[0-9]*.js' -not -path './node_modules/*' -exec dos2unix {} \\;"
   },
   "devDependencies": {
