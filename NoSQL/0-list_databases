@@ -1,2 +1,2 @@
-//show db
+//0. List all databases
 show dbs
