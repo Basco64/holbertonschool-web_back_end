@@ -1,1 +1,2 @@
-let output = "MongoDB shell version: " + db.version() + "\n" + "connecting to: " + db.getMongo()._uri.split('?')[0] + "\n" + "MongoDB server version: " + db.serverBuildInfo().version + "\n"; db.adminCommand('listDatabases').databases.forEach(function(d) { output += d.name + "\t" + (d.sizeOnDisk / 1024 / 1024).toFixed(3) + "GB\n"; }); output += "bye\n"; print(output);
+//show db
+show dbs
