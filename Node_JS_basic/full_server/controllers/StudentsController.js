@@ -4,9 +4,7 @@ class StudentsController {
   static async getAllStudents(request, response) {
     try {
       const file = await readDatabase(process.argv[2]);
-      const sortedFields = Object.keys(file).sort((a, b) =>
-        a.localeCompare(b, undefined, { sensitivity: 'base' })
-      );
+      const sortedFields = Object.keys(file).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 
       let responseText = 'This is the list of our students\n';
 
@@ -34,7 +32,7 @@ class StudentsController {
       const studentsByField = await readDatabase(process.argv[2]);
 
       if (!studentsByField[major]) {
-        response.status(200).send(`List: `);
+        response.status(200).send('List: ');
         return;
       }
 
