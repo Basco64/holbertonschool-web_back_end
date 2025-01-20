@@ -12,13 +12,9 @@ if __name__ == "__main__":
 
     print(f"{logs.count_documents({})} logs")
     print("Methods:")
-    print(f"  method GET: {logs.count_documents({'method': 'GET'})}")
-    print(f"  method POST: {logs.count_documents({'method': 'POST'})}")
-    print(f"  method PUT: {logs.count_documents({'method': 'PUT'})}")
-    print(f"  method PATCH: {logs.count_documents({'method': 'PATCH'})}")
-    print(f"  method DELETE: {logs.count_documents({'method': 'DELETE'})}")
+    print(f"    method GET: {logs.count_documents({'method': 'GET'})}")
+    print(f"    method POST: {logs.count_documents({'method': 'POST'})}")
+    print(f"    method PUT: {logs.count_documents({'method': 'PUT'})}")
+    print(f"    method PATCH: {logs.count_documents({'method': 'PATCH'})}")
+    print(f"    method DELETE: {logs.count_documents({'method': 'DELETE'})}")
     print(f"{status} status check")
-
-if __name__ == "__main__":
-    """View logs stats from nginx logs"""
-    main()
