@@ -8,13 +8,12 @@ const dbPath = process.argv[2];
 async function countStudents(path) {
   try {
     const data = await fs.readFile(path, 'utf8');
-    const lines = data.split('\n').filter((line) => line.trim() !== '');
+    const students = data
+      .trim()
+      .split('\n')
+      .slice(1)
+      .filter((line) => line.length > 0);
 
-    if (lines.length <= 1) {
-      throw new Error('Cannot load the database');
-    }
-
-    const students = lines.slice(1);
     const fields = {};
 
     students.forEach((student) => {
@@ -62,7 +61,7 @@ app.get('/students', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running and listening on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
 
 module.exports = app;

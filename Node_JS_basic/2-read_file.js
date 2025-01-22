@@ -6,7 +6,8 @@ function countStudents(path) {
     const lines = data.split('\n').filter((line) => line.trim() !== '');
 
     if (lines.length <= 1) {
-      throw new Error('Cannot load the database');
+      console.log('Number of students: 0');
+      return;
     }
 
     const students = lines.slice(1);

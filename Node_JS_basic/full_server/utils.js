@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 
-export async function readDatabase(path) {
+export default async function readDatabase(path) {
   try {
     const data = await fs.readFile(path, 'utf8');
     const lines = data.split('\n').filter((line) => line.trim() !== '');
